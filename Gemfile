@@ -11,6 +11,7 @@ gem 'sqlite3', :group => :development
 gem 'gmaps4rails'
 gem "twitter-bootstrap-rails"
 gem "slim-rails"
+gem 'jquery-ui-rails'
 
 gem "thin"
 
@@ -24,7 +25,6 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-ui-rails'
 end
 
 gem 'jquery-rails'
