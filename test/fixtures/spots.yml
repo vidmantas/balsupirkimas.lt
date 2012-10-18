@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  activity: MyString
+  district: MyString
+  voters: MyString
+  contacts: MyString
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  activity: MyString
+  district: MyString
+  voters: MyString
+  contacts: MyString
+  latitude: 1.5
+  longitude: 1.5

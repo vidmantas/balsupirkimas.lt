@@ -1,0 +1,36 @@
+- model_class = Spot
+div class="page-header"
+  h1 
+    = "Pažeidimas ##{@spot.id}"
+
+p
+  strong Veiksmas
+  br
+  = @spot.activity
+p
+  strong Apylinkė
+  br
+  = @spot.district
+p
+  strong Paveikta rinkėjų
+  br
+  = @spot.voters
+p 
+  strong Įtariama partija
+  br
+  = @spot.party
+p
+  strong Kontaktai
+  br
+  = @spot.contacts
+
+p
+  = gmaps("map_options" => { "auto_adjust" => true, "auto_zoom" => false, "zoom" => 14}, 
+    "markers" => { "data" => @json })
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), spots_path, :class => 'btn'
+  '
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_spot_path(@spot), :class => 'btn'
+  '
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), spot_path(@spot), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

@@ -1,0 +1,4 @@
+- model_class = Spot
+div class="page-header"
+  h1=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human, :default => "Naujas pažeidimas")
+= render :partial => "form"

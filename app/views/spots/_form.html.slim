@@ -1,0 +1,33 @@
+= form_for @spot, :html => { :class => "form-horizontal" } do |f|
+  .control-group
+    = f.label :activity, "Veiksmo būdas", :class => 'control-label'
+    .controls
+      = f.text_field :activity, :class => 'text_field'
+    .controls
+      = link_to 'Vežiojimas ', "#", :class => 'proposal', 'data-text' => 'Vežiojimas'
+      = link_to 'Balsų pirkimas ', "#", :class => 'proposal', 'data-text' => 'Balsų pirkimas'
+      = link_to 'Balsavimas prievarta ', "#", :class => 'proposal', 'data-text' => 'Balsavimas prievarta'
+  .control-group
+    = f.label :district, "Apylinkė, apygarda", :class => 'control-label'
+    .controls
+      = f.text_field :district, :class => 'text_field'
+  .control-group
+    = f.label :voters, "Apytiksliai paveiktų rinkėjų skaičius", :class => 'control-label'
+    .controls
+      = f.text_field :voters, :class => 'text_field'
+  .control-group
+    = f.label :contacts, "Jūsų kontaktas, jeigu galima susisiekti detalesnei informacijai", :class => 'control-label'
+    .controls
+      = f.text_field :contacts, :class => 'text_field'
+  .control-group
+    = f.label :party, "Partija, kuri įtariama padarius pažeidimą", :class => 'control-label'
+    .controls
+      = f.text_field :party, :class => 'text_field'
+
+  .form-actions
+    = f.submit "Išsaugoti", :class => 'btn btn-primary'
+    '
+    = link_to t('.cancel', :default => "Atšaukti"), spots_path, :class => 'btn'
+
+  = f.hidden_field :longitude
+  = f.hidden_field :latitude
