@@ -7,6 +7,7 @@ table class="table table-striped"
       th ID
       th Veiksmas
       th Apylinkė
+      th Įtariama partija
       th Paveikta rinkėjų
       th Pranešėjo kontaktas
       th Pranešta
@@ -16,6 +17,7 @@ table class="table table-striped"
         td= link_to spot.id, spot_path(spot)
         td= link_to spot.activity, spot_path(spot)
         td= spot.district
+        td= spot.party
         td= spot.voters
         td= spot.contacts.gsub(/[ -.]+/, '').present? ? "Taip" : ""
         td= spot.created_at.strftime("%Y-%m-%d %H:%M:%S")
