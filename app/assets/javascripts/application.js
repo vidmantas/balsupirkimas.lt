@@ -12,12 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require twitter/bootstrap
 //= require_tree .
 
 $(document).ready(function() {
   $('.proposal').click(function(e) {
     $('#spot_activity').val($(e.target).data('text'));
+  });
+
+  $("#spot_district").autocomplete({
+    source: [
+      "Naujamiesčio","Senamiesčio","Antakalnio","Žirmūnų","Fabijoniškių","Šeškinės","Justiniškių","Karoliniškių","Lazdynų","Naujosios Vilnios","Šilainių","Aleksoto -  Vilijampolės","Centro","Žaliakalnio","Kalniečių","Dainavos","Pramonės","Panemunės","Danės","Baltijos","Marių","Pajūrio","Aušros","Saulės","Dainų","Nevėžio","Vakarinė","Aukštaitijos","Marijampolės","Alytaus","Gargždų","Šilutės - Pagėgių","Šilalės - Šilutės","Tauragės","Plungės - Rietavo","Kretingos","Skuodo  - Mažeikių","Mažeikių","Akmenės - Joniškio","Telšių","Kelmės","Raseinių","Kėdainių","Radviliškio","Šiaulių kaimiškoji","Pakruojo - Joniškio","Pasvalio - Panevėžio","Biržų - Kupiškio","Anykščių - Kupiškio","Rokiškio","Utenos","Zarasų - Visagino","Ignalinos - Švenčionių","Molėtų - Švenčionių","Širvintų - Vilniaus","Vilniaus - Šalčininkų","Vilniaus - Trakų","Trakų - Elektrėnų","Kaišiadorių - Elektrėnų","Jonavos","Ukmergės","Jurbarko","Suvalkijos","Šakių","Kauno - Kėdainių","Kauno kaimiškoji","Prienų - Birštono","Vilkaviškio","Dzūkijos","Varėnos - Eišiškių","Lazdijų - Druskininkų"
+    ]
   });
 });
 
