@@ -3,3 +3,7 @@
 Tinklapis, skirtas rinkimų pažeidimams fiksuoti. 
 
 Kviečiami prisidėti visi norintys. Siųskite pull requestą arba sukontaktuokite vidmantas@kabosis.lt
+
+== TODO
+
+Visas sąrašas yra prie {Github Issues}[https://github.com/vidmantas/balsupirkimas.lt/issues]
