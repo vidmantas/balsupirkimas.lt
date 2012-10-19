@@ -1,4 +1,6 @@
 Pirktibalsai::Application.routes.draw do
+  devise_for :admins
+
   resources :spots
 
   # The priority is based upon order of creation:

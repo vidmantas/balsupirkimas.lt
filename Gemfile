@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source :rubygems
+ruby '1.9.3'
 
 gem 'rails', '3.2.8'
 
@@ -12,6 +13,7 @@ gem 'gmaps4rails'
 gem "twitter-bootstrap-rails"
 gem "slim-rails"
 gem 'jquery-ui-rails'
+gem 'devise'
 
 gem "thin"
 

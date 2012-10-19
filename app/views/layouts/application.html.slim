@@ -25,6 +25,8 @@ html lang="en"
             ul.nav
               li= link_to "Visas sąrašas", "/spots"
               li= link_to "Apie", "#TODO"
+              - if current_admin
+                li= link_to "Atsijungti", destroy_admin_session_path, method: 'delete'
 
     .container-fluid
 

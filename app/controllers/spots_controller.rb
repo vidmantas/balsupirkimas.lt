@@ -1,4 +1,6 @@
 class SpotsController < ApplicationController
+  before_filter :authenticate, only: %w(edit update destroy)
+
   # GET /spots
   # GET /spots.json
   def index
@@ -82,5 +84,12 @@ class SpotsController < ApplicationController
       format.html { redirect_to spots_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def authenticate
+    flash[:notice] = 'FU!'
+    redirect_to root_url and return unless admin_signed_in?
   end
 end
