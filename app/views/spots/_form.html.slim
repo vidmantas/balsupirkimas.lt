@@ -3,12 +3,12 @@
     = f.label :activity, "Veiksmo būdas", :class => 'control-label'
     .controls
       = f.text_field :activity, :class => 'text_field'
-    .controls
+    .controls.single_select
       = link_to 'Vežiojimas ', "#", :class => 'proposal', 'data-text' => 'Vežiojimas'
       = link_to 'Balsų pirkimas ', "#", :class => 'proposal', 'data-text' => 'Balsų pirkimas'
       = link_to 'Balsavimas prievarta ', "#", :class => 'proposal', 'data-text' => 'Balsavimas prievarta'
   .control-group
-    = f.label :district, "Apylinkė, apygarda", :class => 'control-label'
+    = f.label :district, "Apygarda", :class => 'control-label'
     .controls
       = f.text_field :district, :class => 'text_field'
   .control-group
@@ -19,7 +19,7 @@
     = f.label :contacts, "Jūsų kontaktas", :class => 'control-label'
     .controls
       = f.text_field :contacts, :class => 'text_field'
-    .controls
+    small.controls
       'jeigu galima susisiekti detalesnei informacijai
   .control-group
     = f.label :party, "Partija, kuri įtariama padarius pažeidimą", :class => 'control-label'
