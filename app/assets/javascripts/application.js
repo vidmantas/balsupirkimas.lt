@@ -45,7 +45,8 @@ $(document).ready(function() {
       "15. \"Jaunoji Lietuva\"", 
       "16. Liberalų ir centro sąjunga", 
       "17. Emigrantų partija", 
-      "18. Politinė partija \"Sąjunga TAIP\""
+      "18. Politinė partija \"Sąjunga TAIP\"",
+      "Nežinau"
     ]
   })
 });
