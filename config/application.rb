@@ -61,6 +61,11 @@ module Pirktibalsai
   end
 end
 
-CONFIG = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
-CONFIG.merge! CONFIG.fetch(Rails.env, {})
-CONFIG.symbolize_keys!
+config_file = File.expand_path('../application.yml', __FILE__)
+if File.exists?(config_file)
+  config = YAML.load(File.read(config_file))
+  config.merge! config.fetch(Rails.env, {})
+  config.each do |key, value|
+    ENV[key] = value unless value.kind_of? Hash
+  end
+end
