@@ -19,10 +19,12 @@ p
   strong Įtariama partija
   br
   = @spot.party
-p
-  strong Kontaktai
-  br
-  = @spot.contacts
+
+- if current_admin
+  p
+    strong Kontaktai
+    br
+    = @spot.contacts
 
 p
   = gmaps("map_options" => { "auto_adjust" => true, "auto_zoom" => false, "zoom" => 14}, 

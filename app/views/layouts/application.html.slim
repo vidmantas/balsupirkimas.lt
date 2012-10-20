@@ -23,8 +23,8 @@ html lang="en"
           a.brand href="/" Balsų pirkimas
           .container-fluid.nav-collapse
             ul.nav
-              li= link_to "Visas sąrašas", "/spots"
-              li= link_to "Apie", "#TODO"
+              li= link_to "Visas sąrašas", spots_path
+              li= link_to "Apie", about_path
               - if current_admin
                 li= link_to "Atsijungti", destroy_admin_session_path, method: 'delete'
 
@@ -35,8 +35,8 @@ html lang="en"
           .well.sidebar-nav
             ul.nav.nav-list
               li.nav-header Naujausi pažeidimai
-              - Spot.recent(3).each do |spot|
-                li=link_to spot, spot_path(spot)
+              - @recent_entries.each do |spot|
+                li=link_to spot, spot_path(spot), :title => spot.created_at
 
         .span9
           = yield

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121019135249) do
+ActiveRecord::Schema.define(:version => 20121020084737) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(:version => 20121019135249) do
     t.datetime "updated_at", :null => false
     t.boolean  "gmaps"
     t.string   "party"
+    t.datetime "deleted_at"
+    t.integer  "deleted_by"
   end
 
 end

@@ -25,7 +25,7 @@
             markersArray.push(marker);
             // Set and open infowindow
             var infowindow = new google.maps.InfoWindow({
-                content: '<div class="popup"><h3>Pranešk!</h3><p>Nurodyk kuo tikslesnę pažeidimo vietą ir spausk "<a href="/spots/new?ltng='+latLng+'">Pranešti</a>"</p>'
+                content: '<div class="popup"><h3>Pranešk!</h3><p>Nurodyk kuo tikslesnę pažeidimo vietą ir spausk "<a href="<%= new_spot_path %>?ltng='+latLng+'">Pranešti</a>"</p>'
             });
             infowindow.open(Gmaps.map.serviceObject,marker);
             // Listen to drag & drop

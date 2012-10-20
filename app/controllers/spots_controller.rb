@@ -4,7 +4,7 @@ class SpotsController < ApplicationController
   # GET /spots
   # GET /spots.json
   def index
-    @spots = Spot.order('id desc').all
+    @spots = Spot.visible.order('id desc').all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class SpotsController < ApplicationController
   # GET /spots/1
   # GET /spots/1.json
   def show
-    @spot = Spot.find(params[:id])
+    @spot = Spot.visible.find(params[:id])
     @json = [@spot].to_gmaps4rails
     respond_to do |format|
       format.html # show.html.erb
@@ -78,7 +78,7 @@ class SpotsController < ApplicationController
   # DELETE /spots/1.json
   def destroy
     @spot = Spot.find(params[:id])
-    @spot.destroy
+    @spot.mark_destroyed(current_admin)
 
     respond_to do |format|
       format.html { redirect_to spots_url }
