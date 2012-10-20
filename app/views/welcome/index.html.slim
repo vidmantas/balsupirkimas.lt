@@ -1,6 +1,13 @@
+p 
+  strong Išbandykite! 
+  'Visi pranešimai bus ištrinti antradienį, spalio 23 d. 22:00 - prieš išankstinio balsavimo dieną.
+p 
+  'Jei pastebėjote klaidą, turite pasiūlymų, kaip šį įrankį padaryti dar geresnį arba norite prisidėti prie įgyvendinimo - rašykite 
+  = link_to 'nurodytais kontaktais.', about_path
+  '&nbsp;Ačiū!
+p
+  strong Praneškite apie pažeidimą pažymėdami jo vietą žemėlapyje:
 p
   = gmaps("map_options" => { "auto_adjust" => false, "center_latitude" => 55.169438, 
     "center_longitude" => 23.881275, "zoom" => 7}, "markers" => { "data" => @json })
 = render 'gmaps_js'
-
-p Praneškite apie pažeidimą žemėlapyje pažymėdami jo vietą žemėlapyje
