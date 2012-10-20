@@ -29,7 +29,6 @@ html lang="en"
                 li= link_to "Atsijungti", destroy_admin_session_path, method: 'delete'
 
     .container-fluid
-
       .row-fluid
         .span3
           .well.sidebar-nav
@@ -37,6 +36,11 @@ html lang="en"
               li.nav-header Naujausi pažeidimai
               - @recent_entries.each do |spot|
                 li=link_to spot, spot_path(spot), :title => spot.created_at
+        
+          p= render 'social/facebook'
+          p
+            = render 'social/twitter'
+            = render 'social/google_plus'
 
         .span9
           = yield

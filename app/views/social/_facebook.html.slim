@@ -1,0 +1,11 @@
+#fb-root
+.fb-like-box(data-href="http://www.facebook.com/balsupirkimas.lt" data-width="265" data-show-faces="true" data-stream="false" data-header="true")
+
+javascript:
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/lt_LT/all.js#xfbml=1&appId=113080095438032";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
