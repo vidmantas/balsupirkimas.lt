@@ -20,11 +20,21 @@ p
   br
   = @spot.party
 
+p 
+  strong Papildoma informacija
+  br
+  = @spot.description
+
 - if current_admin
   p
     strong Kontaktai
     br
     = @spot.contacts
+
+  p
+    strong IP + user agent
+    br
+    = "#{@spot.user_ip}, #{@spot.user_agent}"
 
 p
   = gmaps("map_options" => { "auto_adjust" => true, "auto_zoom" => false, "zoom" => 14}, 

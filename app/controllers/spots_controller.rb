@@ -46,6 +46,7 @@ class SpotsController < ApplicationController
   # POST /spots.json
   def create
     @spot = Spot.new(params[:spot])
+    @spot.log_user_info(request)
 
     respond_to do |format|
       if @spot.save
