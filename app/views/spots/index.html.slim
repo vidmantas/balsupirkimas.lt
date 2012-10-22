@@ -1,6 +1,9 @@
 - model_class = Spot
 div class="page-header"
   h1 Pažeidimai
+
+= paginate @spots
+
 table class="table table-striped"
   thead
     tr
@@ -21,3 +24,5 @@ table class="table table-striped"
         td= spot.voters
         td= spot.contacts.gsub(/[ -.]+/, '').present? ? "Taip" : ""
         td= spot.created_at.strftime("%Y-%m-%d %H:%M:%S")
+
+= paginate @spots

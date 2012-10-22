@@ -6,14 +6,16 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg', :group => :production
-gem 'sqlite3', :group => :development
+gem 'pg', '~> 0.14.1', :group => :production
+gem 'sqlite3', '~> 1.3.6', :group => :development
 
-gem 'gmaps4rails'
-gem "twitter-bootstrap-rails"
-gem "slim-rails"
-gem 'jquery-ui-rails'
-gem 'devise'
+gem 'gmaps4rails', '~> 1.5.6'
+gem "twitter-bootstrap-rails", '~> 2.1.4'
+gem "slim-rails", '~> 1.0.3'
+gem 'jquery-ui-rails', '~> 2.0.2'
+gem 'devise', '~> 2.1.2'
+gem 'kaminari', '~> 0.14.1'
+gem 'kaminari-bootstrap', '~> 0.1.3'
 
 gem "thin"
 
@@ -29,7 +31,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.1.3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

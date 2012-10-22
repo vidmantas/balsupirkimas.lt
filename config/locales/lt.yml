@@ -1,0 +1,8 @@
+lt:
+  views:
+    pagination:
+      first: "&laquo; Pirmas"
+      last: "Paskutinis &raquo;"
+      previous: "&lsaquo; Atgal"
+      next: "Pirmyn &rsaquo;"
+      truncate: "..."

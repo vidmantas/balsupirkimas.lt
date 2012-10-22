@@ -8,6 +8,8 @@ class Spot < ActiveRecord::Base
 
   validates_presence_of :activity, :district, :voters, :party
 
+  paginates_per 20
+
   def to_s
     [activity, party || '-'].join(', ')
   end
