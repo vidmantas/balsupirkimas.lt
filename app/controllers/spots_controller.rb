@@ -1,5 +1,6 @@
 class SpotsController < ApplicationController
   before_filter :authenticate, only: %w(edit update destroy)
+  after_filter :expire_pages, only: %w(create update destroy)
 
   # GET /spots
   # GET /spots.json
@@ -92,5 +93,10 @@ class SpotsController < ApplicationController
   def authenticate
     flash[:notice] = 'FU!'
     redirect_to root_url and return unless admin_signed_in?
+  end
+
+  def expire_pages
+    expire_page controller: 'welcome', action: 'index'
+    expire_page controller: 'statistics', action: 'index'
   end
 end
