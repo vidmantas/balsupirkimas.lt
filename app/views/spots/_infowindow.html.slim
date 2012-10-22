@@ -1,13 +1,14 @@
 h4= link_to(spot.activity, spot_path(spot))
 p
-  strong Apylinkė 
+  strong Apylinkė: 
   = spot.district
 p
-  strong Paveiktų rinkėjų 
+  strong Paveiktų rinkėjų: 
   = spot.voters
 p
-  strong Įtariamia partija 
+  strong Įtariamia partija: 
   = spot.party
+
 p
-  strong Kontaktas 
-  = spot.contacts
+  strong Pranešta: 
+  = l spot.created_at

@@ -23,6 +23,12 @@ table class="table table-striped"
         td= spot.party
         td= spot.voters
         td= spot.contacts.gsub(/[ -.]+/, '').present? ? "Taip" : ""
-        td= spot.created_at.strftime("%Y-%m-%d %H:%M:%S")
+        td= l spot.created_at
 
 = paginate @spots
+
+- if current_admin
+  'Prisijungęs: 
+  = current_admin.email
+  '&nbsp;
+  = link_to "Atsijungti", destroy_admin_session_path, method: 'delete'

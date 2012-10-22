@@ -6,3 +6,7 @@ lt:
       previous: "&lsaquo; Atgal"
       next: "Pirmyn &rsaquo;"
       truncate: "..."
+
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M"

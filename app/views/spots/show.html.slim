@@ -3,41 +3,42 @@ div class="page-header"
   h1 
     = "Pažeidimas ##{@spot.id}"
 
-p
-  strong Veiksmas
-  br
-  = @spot.activity
-p
-  strong Apylinkė
-  br
-  = @spot.district
-p
-  strong Paveikta rinkėjų
-  br
-  = @spot.voters
-p 
-  strong Įtariama partija
-  br
-  = @spot.party
+table
+  tr
+    td.strong Veiksmas:
+    td= @spot.activity
 
-p 
-  strong Papildoma informacija
-  br
-  = @spot.description
+  tr
+    td.strong Apylinkė:
+    td= @spot.district
 
-- if current_admin
-  p
-    strong Kontaktai
-    br
-    = @spot.contacts
+  tr
+    td.strong Paveikta rinkėjų:
+    td= @spot.voters
 
-  p
-    strong IP + user agent
-    br
-    = "#{@spot.user_ip}, #{@spot.user_agent}"
+  tr
+    td.strong Įtariama partija:
+    td= @spot.party
+
+  tr
+    td.strong Papildoma informacija:
+    td= @spot.description
+
+  tr
+    td.strong Pranešta:
+    td= l @spot.created_at
+
+  - if current_admin
+    tr
+      td.strong Kontaktai:
+      td= @spot.contacts
+
+    tr
+      td.strong IP + user agent:
+      td= "#{@spot.user_ip}, #{@spot.user_agent}"
 
 p
-  = gmaps("map_options" => { "auto_adjust" => true, "auto_zoom" => false, "zoom" => 14}, 
+  = gmaps("map_options" => { "auto_adjust" => true, "auto_zoom" => false, "zoom" => 12}, 
     "markers" => { "data" => @json })
 
 .form-actions
