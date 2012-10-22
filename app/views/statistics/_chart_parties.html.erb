@@ -1,0 +1,21 @@
+<% content_for :scripts do %>
+  <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawCharts);
+    
+    function drawCharts() {
+      var data = google.visualization.arrayToDataTable(<%= parties_stat_array(@parties) %>);
+      var options = { title: 'Pagal partijas' };
+
+      var chart = new google.visualization.PieChart(document.getElementById('parties_div'));
+      chart.draw(data, options);
+
+      // districts
+      var data = google.visualization.arrayToDataTable(<%= districts_stat_array(@districts) %>);
+      var options = { title: 'Pagal apylinkes' };
+
+      var chart = new google.visualization.PieChart(document.getElementById('districts_div'));
+      chart.draw(data, options);
+    }
+  </script>
+<% end %>

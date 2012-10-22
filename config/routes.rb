@@ -4,5 +4,6 @@ Pirktibalsai::Application.routes.draw do
     :new => 'naujas'
   }
   match 'apie' => 'about#index', :as => 'about'
+  match 'statistika' => 'statistics#index', :as => 'statistics'
   devise_for :admins
 end

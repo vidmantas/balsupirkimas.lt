@@ -37,6 +37,7 @@ html lang="en"
           .container-fluid.nav-collapse
             ul.nav
               li= link_to "Visas sąrašas", spots_path
+              li= link_to "Statistika", statistics_path
               li= link_to "Apie", about_path
               - if current_admin
                 li= link_to "Atsijungti", destroy_admin_session_path, method: 'delete'
@@ -65,4 +66,5 @@ html lang="en"
       \==================================================
     /! Placed at the end of the document so the pages load faster
     = javascript_include_tag "application"
+    = javascript_include_tag "https://www.google.com/jsapi"
     = yield :scripts
