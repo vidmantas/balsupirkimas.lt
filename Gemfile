@@ -16,6 +16,7 @@ gem 'jquery-ui-rails', '~> 2.0.2'
 gem 'devise', '~> 2.1.2'
 gem 'kaminari', '~> 0.14.1'
 gem 'kaminari-bootstrap', '~> 0.1.3'
+gem 'newrelic_rpm'
 
 gem "thin"
 
