@@ -24,11 +24,11 @@
     .controls
       = f.text_field :voters, :class => 'text_field'
   .control-group
-    = f.label :contacts, "Jūsų kontaktas", :class => 'control-label'
+    = f.label :contacts, "Jūsų vardas, pavardė ir kontaktas", :class => 'control-label'
     .controls
       = f.text_field :contacts, :class => 'text_field'
     small.controls
-      'jeigu galima susisiekti detalesnei informacijai. NEBUS VIEŠINAMA
+      'NEBUS VIEŠINAMA. Anoniminiai skundai pagal LR įstatymus nenagrinėjami
   .control-group
     = f.label :party, trans(:party), :class => 'control-label'
     .controls
@@ -39,7 +39,10 @@
     .controls
       = f.text_area :description, :class => 'text_area', :rows => 2
     small.controls
-      'bet kas, kas pagelbėtų tiriant pažeidimą
+      'bet kas, kas pagelbėtų tiriant pažeidimą (pažeidime dalyvavę asmenys, laikas, vieta ir t.t.)
+
+  p
+    strong Spausdamas "IŠSAUGOTI" patvirtinu, kad mano pateikti duomenys yra teisingi, neišgalvoti ir kartu su asmeniniais duomenimis gali būti perduoti Lietuvos Respublikos institucijoms tolesniam tyrimui.
 
   .form-actions
     = f.submit "Išsaugoti", :class => 'btn btn-primary'
