@@ -98,5 +98,6 @@ class SpotsController < ApplicationController
   def expire_pages
     expire_page controller: 'welcome', action: 'index'
     expire_page controller: 'statistics', action: 'index'
+    expire_page controller: 'about', action: 'index'
   end
 end
