@@ -13,6 +13,7 @@ html lang="en"
     = stylesheet_link_tag "application", :media => "all"
     link href="/images/favicon.ico" rel="shortcut icon"
 
+    link href="images/balsupirkimas.jpg" rel="image_src"
     /! Making GA totally happy
     javascript:
       var _gaq = _gaq || [];
@@ -53,6 +54,8 @@ html lang="en"
           p
             = render 'social/twitter'
             = render 'social/google_plus'
+          img#share_img src="images/balsupirkimas.jpg"
+
 
         .span9
           = yield

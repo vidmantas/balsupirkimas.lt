@@ -14,3 +14,7 @@
  *= require jquery.ui.theme
  *= require jquery.ui.autocomplete
 */
+#share_img {
+  border: 1px solid #ddd;
+  display: none;
+}
