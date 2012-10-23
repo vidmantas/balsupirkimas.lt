@@ -8,7 +8,7 @@
           li= msg 
 
   .control-group
-    = f.label :activity, "Veiksmo būdas", :class => 'control-label'
+    = f.label :activity, trans(:activity), :class => 'control-label'
     .controls
       = f.text_field :activity, :class => 'text_field'
     .controls.single_select
@@ -16,11 +16,11 @@
       = link_to 'Balsų pirkimas ', "#", :class => 'proposal', 'data-text' => 'Balsų pirkimas'
       = link_to 'Balsavimas prievarta ', "#", :class => 'proposal', 'data-text' => 'Balsavimas prievarta'
   .control-group
-    = f.label :district, "Apygarda", :class => 'control-label'
+    = f.label :district, trans(:district), :class => 'control-label'
     .controls
       = f.text_field :district, :class => 'text_field'
   .control-group
-    = f.label :voters, "Apytiksliai paveiktų rinkėjų skaičius", :class => 'control-label'
+    = f.label :voters, trans(:district), :class => 'control-label'
     .controls
       = f.text_field :voters, :class => 'text_field'
   .control-group
@@ -30,7 +30,7 @@
     small.controls
       'jeigu galima susisiekti detalesnei informacijai. NEBUS VIEŠINAMA
   .control-group
-    = f.label :party, "Partija, kuri įtariama padarius pažeidimą", :class => 'control-label'
+    = f.label :party, trans(:party), :class => 'control-label'
     .controls
       = f.text_field :party, :class => 'text_field'
 

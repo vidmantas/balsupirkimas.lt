@@ -10,3 +10,22 @@ lt:
   time:
     formats:
       default: "%Y-%m-%d %H:%M"
+  activerecord:
+    attributes:
+      spot:
+        party: "Partija, kuri įtariama padarius pažeidimą"
+        activity: "Veiksmo būdas"
+        district: "Apygarda"
+        voters: "Apytiksliai paveiktų rinkėjų skaičius"
+    errors:
+      models:
+        spot:
+          attributes:
+            party:
+              blank: ""
+            activity:
+              blank: ""
+            district:
+              blank: ""
+            voters:
+              blank: ""
