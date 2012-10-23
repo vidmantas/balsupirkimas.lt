@@ -17,6 +17,7 @@ lt:
         activity: "Veiksmo būdas"
         district: "Apygarda"
         voters: "Apytiksliai paveiktų rinkėjų skaičius"
+        recaptcha: "Įveskite"
     errors:
       models:
         spot:
@@ -29,3 +30,6 @@ lt:
               blank: ""
             voters:
               blank: ""
+  recaptcha:
+    errors:
+      verification_failed: "Prašome įvesti teisingą patvirtinimo kodą"

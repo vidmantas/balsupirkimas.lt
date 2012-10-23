@@ -50,7 +50,7 @@ class SpotsController < ApplicationController
     @spot.log_user_info(request)
 
     respond_to do |format|
-      if @spot.save
+      if (!recaptcha_enabled? || verify_recaptcha(:model => @spot)) and @spot.save
         format.html { redirect_to @spot, notice: 'Spot was successfully created.' }
         format.json { render json: @spot, status: :created, location: @spot }
       else

@@ -44,6 +44,12 @@
   p
     strong Spausdamas "IŠSAUGOTI" patvirtinu, kad mano pateikti duomenys yra teisingi, neišgalvoti ir kartu su asmeniniais duomenimis gali būti perduoti Lietuvos Respublikos institucijoms tolesniam tyrimui.
 
+  - if recaptcha_enabled?
+    .control-group
+      = f.label :recaptcha_response_field, trans(:recaptcha), :class => 'control-label'
+      .controls
+        = recaptcha_tags
+
   .form-actions
     = f.submit "Išsaugoti", :class => 'btn btn-primary'
     '

@@ -2,6 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_filter :load_recent
+  helper_method :recaptcha_enabled?
+
+  def recaptcha_enabled?
+    ENV['enable_recaptcha'] == '1' 
+  end
 
   private
   
