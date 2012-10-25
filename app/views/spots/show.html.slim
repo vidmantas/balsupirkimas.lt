@@ -22,7 +22,11 @@ table
 
   tr
     td.strong Papildoma informacija:
-    td= @spot.description
+    td
+      - if current_admin
+        = @spot.description
+      - else
+        = truncate @spot.description
 
   tr
     td.strong Pranešta:
